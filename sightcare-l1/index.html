@@ -420,14 +420,183 @@ body {
     <div class="w-embed w-script">
     <div id="vid_65b5193112ab8300085de9a3" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_65b5193112ab8300085de9a3" src="https://images.converteai.net/9d1f4327-1dc5-46ae-8030-267fa8685435/players/65b5193112ab8300085de9a3/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_65b5193112ab8300085de9a3" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_65b5193112ab8300085de9a3">var s=document.createElement("script");s.src="https://scripts.converteai.net/9d1f4327-1dc5-46ae-8030-267fa8685435/players/65b5193112ab8300085de9a3/player.js",s.async=!0,document.head.appendChild(s);</script>
     <br>
-      <a href="https://getsightcarefast.net/video/int/?aff_id=988566" class="esconder button animated-button1 full-width _2 w-inline-block">
-        <div class="text-block-67">YES, I WANT SIGHTCARE!</div>
-        <div class="w-embed"><span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </a>
+     <div style="position: relative;display: block;width: 350px;">
+	 <div style="width: 100%; text-align: center; margin-bottom: -10px; font-family: sans-serif; font-weight: 600; color: #094f8b;" class="d-none2">SPIN THE WHEEL TO WIN A DISCOUNT!</div>
+    <div class="d-none2" style="position: relative;display: block;width: 150px;height: 200px;margin-left: 100px;margin-top: 20px;">
+	<div style="position:absolute;display: block;width: 88%;height: 88%;top: 5.5%;left: 5.5%;">
+		<picture style="
+    display: block;
+    width: 100%;
+">
+			<img src="roleta03.png" alt="MDN" style="
+    width: 100%;
+    transform: rotate(0deg);
+" class="roleta_sorteio">
+		</picture>
+	</div><div style="position:absolute;display: block;width: 100%;height: 100%;">
+		<picture style="
+    width: 100%;
+    height: 100%;
+    display: block;
+">
+			  <img src="roleta01.png" alt="MDN" style="
+    width: 100%;
+">
+		</picture>
+	</div>
+	<div style="position:absolute;display: block;width: 30%;left: 39%;top: 30%;cursor: pointer;" class="start_roleta" onclick="start_roleta_sorteio()">
+
+		<picture style="
+    display: block;
+    width: 100%;
+">
+			<img src="roleta02.png" alt="MDN" style="
+    width: 100%;
+">
+		</picture>
+	</div>
+    </div>
+    <div class="d-none2" style="
+    width: 100%;
+    display: block;
+">
+    	<img onclick="start_roleta_sorteio()" src="botaoSpin.png" style="
+    width: 122px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    animation: ZoomInZoomOut infinite 1s;
+    margin-top: -10px;
+    transform-origin: center;
+">
+	<div style="
+    color: red;
+    text-align: center;
+    font-size: 9px;
+    font-weight: 600;
+    font-family: sans-serif;
+">One FREE Spin Left</div>
+    </div>
+	<div class="splash_roleta" style="width: 350px;background: white;z-index: 10; display: none; border-radius: 20px;border: 2px solid rgb(147, 146, 146);padding: 5px;top: 0px;position: absolute;">
+		<div class="animation2" style="
+    font-size: 21px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    color: #40c340;
+    font-weight: 900;
+    animation: ZoomInZoomOut infinite 0.45s ease-out;
+    transform-origin: center;
+">CONGRATULATIONS!</div>
+
+		<a class="linkCheckOut" href="https://cerebrozen.com/b/order-now.php?aff_id=4587">
+
+<img class="bottomCheckOut" src="botaochekout.png" style="
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    transform-origin: center;
+">
+</a>
+<div class="text" style="
+    font-size: 17px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;    
+    color: #000000;
+    font-weight: 900;
+">Valued at <span style="
+    color: #ff0000ba;
+    text-decoration: line-through;
+    font-weight: 800;
+">$69.00</span>
+<span style="
+    color: #40c340;
+    font-weight: 900;
+">$49.00</span></div>
+<div style="
+    width: 100%;
+    text-align: center;
+    margin: 13px 0px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+">This prize expires in <span class="timer_splash" style="
+    font-weight: 600;
+    color: red;
+">4:59</span></div>
+	</div>
+
+</div>
+
+<style>
+	.start_roleta:hover{
+		opacity: 0.5;
+	}
+
+	.bottomCheckOut{
+		transition: transform;
+	}
+
+	.bottomCheckOut{
+		animation: ZoomInZoomOut infinite 1s;
+	}
+
+	@keyframes roleta {
+	  0%   {transform: rotate(0deg);}
+	  40% {transform: rotate(3851deg);}
+	  100% {transform: rotate(3851deg);}
+	}
+
+	@keyframes ZoomInZoomOut {
+	  0%   {transform: scale(1.0);}
+	  50%   {transform: scale(1.12);}
+	  100%   {transform: scale(1.0);}
+	}
+</style>
+
+<script>
+	function start_roleta_sorteio(){
+		document.getElementsByClassName('roleta_sorteio')[0].style.animation = "roleta 15s cubic-bezier(0.76, 0.1, 0, 1.065)";
+
+		let min = 4;
+		let sec = 59;
+
+		setTimeout(() => {
+  			document.getElementsByClassName('splash_roleta')[0].style.display = "block"
+  			document.getElementsByClassName('roleta_sorteio')[0].style.animation = "none";
+  			document.getElementsByClassName('timer_splash')[0].textContent = "4:59";
+  			document.getElementsByClassName('d-none2')[0].style.display = "none";
+  			document.getElementsByClassName('d-none2')[1].style.display = "none";
+  			document.getElementsByClassName('d-none2')[2].style.display = "none";
+
+  			let interval = setInterval(() => {
+  				if(sec == 0){
+  					if(min > 0){
+  						min--;
+  						sec = 59
+  					}
+  				}else{
+  					sec--;
+  				}
+
+				document.getElementsByClassName('timer_splash')[0].textContent = min+":"+(String(sec).padStart(2,'0'));
+
+				if(sec == 0 && min == 00){
+					clearInterval(interval);
+  					window.location.href = document.getElementsByClassName('linkCheckOut')[0].getAttribute('href');
+  				}
+
+			}, 1000);
+
+		}, 7000);
+
+		
+	}
+</script>
       <link rel="prefetch" href="https://getsightcarefast.net/video/int/?aff_id=988566">
     </div>
   </div>
