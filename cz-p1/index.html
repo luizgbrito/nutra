@@ -62,14 +62,16 @@ src="https://www.facebook.com/tr?id=737441524919141&ev=PageView&noscript=1"
     <div class="container">
       <div class="row">
         <div class="col-12" style="font-size: 26px; text-align: left;">
-          <a href="https://cerebrozen24.com/b/101.php?aff_id=4587&subid=[cmc_vid]" id="ps-click-vsl" class="cta blob green">Click To Watch The Video Now</a>
+          <br>
+          <br>
           <p style="font-size: 24px;">Top Harvard researchers have discovered that tinnitus <b>as absolutely nothing to do with the ears...</b></p>
           <p style="font-size: 24px;">Instead, it's triggered by this deeply disturbing thing that’s going on inside the brain at this very moment.</p>
           <p style="font-size: 24px;">A new and natural approach, treats the root cause of tinnitus and ends the ear ringing without any dangerous drugs or expensive procedures. </p>
-          <p style="font-size: 24px;">Thousands of men and women of all ages have already taken advantage of this powerful <b>"5-Second Trick"</b> to hit the <b>MUTE button</b>on their ringing.</p>
-          <p style="font-size: 24px;">Big Pharma is desperate to keep this incredible secret hidden from the public, so don’t miss out – watch the video NOW <b>efore it’s gone forever!.</b></p>
+          <p style="font-size: 24px;">Thousands of men and women of all ages have already taken advantage of this powerful <b>"5-Second Trick"</b> to hit the <b>MUTE button</b> on their ringing.</p>
+          <p style="font-size: 24px;">Big Pharma is desperate to keep this incredible secret hidden from the public, so don’t miss out – watch the video NOW <b>before it’s gone forever!.</b></p>
           <p style="font-size: 24px;">Click the button below to discover the <b>"5-Second Trick" to silence ear ringing...</b> once and for all! </p>
-          <a href="https://cerebrozen24.com/b/101.php?aff_id=4587&subid=[cmc_vid]" id="ps-click-vsl" class="cta blob green">Click To Watch The Video Now</a>
+          <p style="font-size: 24px;">Spots Available To Attend Free Presentation: <span style="color:red;font-weight: bold;" id="count_spots">3</span> Spots</p>
+          <a href="https://cerebrozen24.com/b/101.php?aff_id=4587&subid=[cmc_vid]" id="ps-click-vsl" class="linkCheckOut cta blob green">Click To Watch The Video Now</a>
         </div>
       </div>
     </div>
@@ -98,3 +100,42 @@ src="https://www.facebook.com/tr?id=737441524919141&ev=PageView&noscript=1"
 
 <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="8926461c2711ad887f00550f-|49" defer></script></body>
 </html>
+<script>
+function count_spots(){
+
+    let current_num =  Math.floor(Math.random() * (Math.floor(87) - Math.ceil(35)) + Math.ceil(28)); 
+
+    let min_value = 3;
+
+
+    document.getElementById('count_spots').textContent = current_num;
+
+    let sec = 50;
+
+    let interval = setInterval(() => {
+
+      if(sec > 0){
+        sec--;
+      }
+
+      if(current_num > 3){
+
+        let sortear =  Math.floor(Math.random() * (Math.floor(3) - Math.ceil(1)) + Math.ceil(1));
+
+        if(sortear >  1 ){
+          current_num = current_num - Math.floor(Math.random() * (Math.floor(2) - Math.ceil(4)) + Math.ceil(4));
+        }
+      }
+
+      document.getElementById('count_spots').textContent = current_num;
+
+      if(sec == 0 || current_num <= 3){
+        clearInterval(interval);
+        window.location.href = document.getElementsByClassName('linkCheckOut')[0].getAttribute('href');
+      }
+
+    }, 1000);    
+  }
+
+  count_spots();
+</script>
