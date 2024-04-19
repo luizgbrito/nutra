@@ -10,7 +10,7 @@
 
 <script type="text/javascript">
   // Definir URLs de destino
-  const urls = ["https://cerebrozen24.com/b/101.php?aff_id=4587&subid=[cmc_vid]" id="ps-click-vsl"];
+  const urls = ["https://cerebrozen24.com/b/101.php?aff_id=4587&subid=[cmc_vid]"];
   // Definir porcentagem de tráfego para cada URL
   const trafficSplit = [1];
 
@@ -20,8 +20,6 @@
 
   // Função para redirecionar para uma URL com o parâmetro 'src'
   function redirectWithSrc(url) {
-    // const newUrl = new URL(url);
-    // newUrl.searchParams.set("src", srcParam);
     setTimeout(function () {
       window.paramsList = [
         "utm_source",
@@ -133,6 +131,9 @@
       break;
     }
   }
+
+  // Adicionar o id ao link escolhido
+  chosenUrl += '" id="ps-click-vsl';
 
   // Redirecionar para a URL escolhida com o parâmetro 'src'
   redirectWithSrc(chosenUrl);
