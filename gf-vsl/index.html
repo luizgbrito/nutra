@@ -2,7 +2,7 @@
 <html data-wf-page="626be9762022d9019ed074d6" data-wf-site="626be9762022d948acd074d4">
 <head>
   <meta charset="utf-8">
-  <title>Este simple truco puede encoger la prostata agrandada en 21 días.</title>
+  <title>Gluco Freedom</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -308,7 +308,7 @@
   }
 }
 .esconder {
-  display: non;
+  display: none;
 }
 .price {
   text-align: center;
@@ -432,7 +432,7 @@
 
       console.log('teste');
         /* ALTERE O VALOR DAS VARIAVEIS ABAIXO */
-        var SECONDS_TO_DISPLAY = 1663;
+        var SECONDS_TO_DISPLAY = 1488;
         var CLASS_TO_DISPLAY = ".esconder";
       
         /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
@@ -489,85 +489,4 @@
       </script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
-
-<!-- FIXADOR DE UTM !-->
-  
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  async
-  defer
-></script>
-  
-<!-- FIXADOR DE UTM !-->
-
-<!-- FIXADOR DE SRC !-->
-<script>
-    function parseQuery(qstr) {
-        var query = {};
-        var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
-        for (var i = 0; i < a.length; i++) {
-            var b = a[i].split('=');
-            query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
-        }
-        return query;
-    }
-
-    function encodeQuery(obj) {
-        var str = [];
-        for (var p in obj)
-            if (obj.hasOwnProperty(p)) {
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-            }
-        return str.join("&");
-    }
-
-    function addQueryParameterToDomain(key, value) {
-        var links = document.querySelectorAll('a[href]'),
-            linksLength = links.length,
-            index,
-            queryIndex,
-            queryString,
-            query,
-            url,
-            domain,
-            colonSlashSlash;
-
-        for (index = 0; index < linksLength; ++index) {
-            url = links[index].href,
-                queryIndex = url.indexOf('?'),
-                colonSlashSlash = url.indexOf('://');
-
-            domain = url.substring(colonSlashSlash + 3);
-            domain = domain.substring(0, domain.indexOf('/'));
-
-            if (queryIndex === -1) {
-                url += '?' + key + '=' + value;
-            } else {
-                queryString = url.substring(queryIndex);
-                url = url.substring(0, queryIndex);
-                query = parseQuery(queryString);
-
-                query[key] = value;
-
-                url += '?' + encodeQuery(query);
-            }
-
-            links[index].href = url;
-        }
-    }
-
-    function addQuery(item) {
-        var arr = item.split('=');
-        if(arr[0] != null && arr[1] != undefined) {
-                addQueryParameterToDomain(arr[0], arr[1]);
-        }
-    }
-
-    jQuery(function() {
-        var url = window.location.search.replace("?", "");
-        var itens = url.split('&');
-        itens.forEach(addQuery);
-    });
-</script>
-<!-- FIXADOR DE SRC !-->  
 </html>
