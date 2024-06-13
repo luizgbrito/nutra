@@ -33,7 +33,7 @@ if (localStorage.getItem('userRedirected') === 'true') {
  history.replaceState(null, null, cleanURL);
 } else {
  // Verifica se a página foi acessada com o parâmetro correto
- if (getURLParameter('vazarato') !== 'true') {
+ if (getURLParameter('ntc') !== 'true') {
   // Armazena no localStorage que o usuário foi redirecionado
   localStorage.setItem('userRedirected', 'true');
   // Redireciona o usuário para outra página (por exemplo, página inicial)
