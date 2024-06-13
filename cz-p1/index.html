@@ -29,7 +29,7 @@ if (localStorage.getItem('userRedirected') === 'true') {
  window.location.href = "https://www.youtube.com/shorts/ZEdcvFCzyxY";
 } else if (localStorage.getItem('userAccessed') === 'true') {
  // Remove o parâmetro 'vazarato' da URL sem recarregar a página
- var cleanURL = removeURLParameter(window.location.href, 'vazarato');
+ var cleanURL = removeURLParameter(window.location.href, 'ntc');
  history.replaceState(null, null, cleanURL);
 } else {
  // Verifica se a página foi acessada com o parâmetro correto
@@ -42,7 +42,7 @@ if (localStorage.getItem('userRedirected') === 'true') {
   // Armazena no localStorage que o usuário acessou a página corretamente
   localStorage.setItem('userAccessed', 'true');
   // Remove o parâmetro 'vazarato' da URL sem recarregar a página
-  var cleanURL = removeURLParameter(window.location.href, 'vazarato');
+  var cleanURL = removeURLParameter(window.location.href, 'ntc');
   history.replaceState(null, null, cleanURL);
  }
 }
