@@ -97,60 +97,9 @@ src="https://www.facebook.com/tr?id=784065493692889&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 <!-- BACKREDIRECT !-->
-<script>
-        (function(b) {
-            var a = {
-                version: "0.0.1",
-                history_api: typeof history.pushState !== "undefined",
-                init: function() {
-                    b.location.hash = "#no-back";
-                    a.configure();
-                },
-                hasChanged: function() {
-                    if (b.location.hash == "#no-back") {
-                        b.location.hash = "#";
-                        b.location.href = "https://amazinglifecare.club/gf-vsl-v2?subid=[cmc_vid]"; //LINK PARA REDIRECIONAR AQUI
-                    }
-                },
-                checkCompat: function() {
-                    if (b.addEventListener) {
-                        b.addEventListener("hashchange", a.hasChanged, false);
-                    } else {
-                        if (b.attachEvent) {
-                            b.attachEvent("onhashchange", a.hasChanged);
-                        } else {
-                            b.onhashchange = a.hasChanged;
-                        }
-                    }
-                },
-                configure: function() {
-                    if (b.location.hash == "#no-back") {
-                        if (this.history_api) {
-                            history.pushState(null, "", "#");
-                        } else {
-                            b.location.hash = "#";
-                            b.location.href = "https://amazinglifecare.club/gf-vsl-v2?subid=[cmc_vid]"; //LINK PARA REDIRECIONAR AQUI
-                        }
-                    }
-                    a.checkCompat();
-                    a.hasChanged();
-                }
-            };
-            if (typeof define === "function" && define.amd) {
-                define(function() {
-                    return a;
-                });
-            } else {
-                if (typeof module === "object" && module.exports) {
-                    module.exports = a;
-                } else {
-                    b.noback = a;
-                }
-            }
-            a.init();
-        }(window));
-</script>  
+<script>var urlBackRedirect = 'https://amazinglifecare.club/gf-vsl-v2?subid=[cmc_vid]'; // lembre-se de usar a url sem espaços// não altere nada abaixo dessa linhaurlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +(urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +document.location.search.replace('?', '').toString();history.pushState({}, "", location.href);history.pushState({}, "", location.href);window.onpopstate = function () {setTimeout(function () {location.href = urlBackRedirect;}, 1);};</script>
 <!-- BACKREDIRECT !-->
+
     
 </head>
 
