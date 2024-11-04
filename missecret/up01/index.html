@@ -462,45 +462,63 @@ text-align: center;
 </div>
 
 <script type="text/javascript">
-  /* ALTERE O VALOR DAS VARIAVEIS ABAIXO */
-  var SECONDS_TO_DISPLAY = 435; // Tempo em segundos para exibir o elemento
-  var CLASS_TO_DISPLAY = ".esconder";
 
-  /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
-  var elsHiddenList = [];
-  var elsDisplayed = false;
-  var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
-  var alreadyElsDisplayed = localStorage.getItem('alreadyElsDisplayed');
-
-  setTimeout(() => { elsHiddenList = Array.from(elsHidden); }, 0);
-
-  var showEls = () => {
-    elsDisplayed = true;
-    elsHiddenList.forEach(e => e.style.display = "block"); // Exibe o elemento
-    localStorage.setItem('alreadyElsDisplayed', true);
-  };
-
-  var startWatchVideoProgress = () => {
-    if (typeof smartplayer !== 'undefined' && smartplayer.instances && smartplayer.instances[0]) {
-      setInterval(function() {
-        console.log(smartplayer.instances[0].video.currentTime);
-
-        if (smartplayer.instances[0].video.currentTime > SECONDS_TO_DISPLAY) {
-          console.log('Exibindo elemento');
-          showEls();
+      console.log('teste');
+        /* ALTERE O VALOR DAS VARIAVEIS ABAIXO */
+        var SECONDS_TO_DISPLAY = 435;
+        var CLASS_TO_DISPLAY = ".esconder";
+      
+        /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
+        var elsHiddenList = [];
+        var elsDisplayed = false;
+        var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
+        var alreadyElsDisplayed = localStorage.getItem('alreadyElsDisplayed')
+      
+        setTimeout(() => { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
+      
+        var showEls = () => {
+          elsDisplayed = true;
+          elsHiddenList.forEach((e)=> e.style.display = "block");
+          localStorage.setItem('alreadyElsDisplayed', true)
         }
-      }, 1000);
-    } else {
-      console.log("Esperando o smartplayer estar disponível...");
-      setTimeout(startWatchVideoProgress, 500);  // Tenta novamente após 500ms
-    }
-  };
-
-  if (alreadyElsDisplayed === 'true') {
-    showEls(); // Exibe o elemento imediatamente se já tiver sido mostrado anteriormente
-  } else {
-    startWatchVideoProgress(); // Inicia o monitoramento do progresso do vídeo
-  }
-</script>
+      
+      //   var startWatchVideoProgress = () => {
+      //     // if (typeof smartplayer === 'undefined') {
+      //       setInterval(function(){
+      //           // console.log(smartplayer.instances[0].video.currentTime);
+            
+      //           console.log('showEls');
+      //       if (smartplayer.instances[0].video.currentTime > SECONDS_TO_DISPLAY) {
+      //           // console.log('agora vai!!!!!!!!!!!!!!!!!')
+      //       }
+      //       startWatchVideoProgress() 
+                
+      //       }, 500);
+      //   // }
+      
+      //     // smartplayer.instances[0].on('timeupdate', ()=> {
+              
+            
+            
+      //     // })
+      //   }
+      
+      //   if (alreadyElsDisplayed === 'true') {
+      //       setInterval(function(){
+      //           showEls();
+      //   },1000)
+          
+      //   } else {
+      //     startWatchVideoProgress()
+      //   }
+        setInterval(function(){
+            console.log(smartplayer.instances[0].video.currentTime);
+            
+            if (smartplayer.instances[0].video.currentTime > SECONDS_TO_DISPLAY) {
+                 console.log('teste');
+              $('.esconder').css('display','block');
+            }
+        },1000)
+      </script>
 
 </body></html>
