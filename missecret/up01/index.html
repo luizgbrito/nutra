@@ -456,65 +456,21 @@ checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
 
 </div>
 
-  <script type="text/javascript">
+<!--Início do codigo para delay de conteudo-->
+<style>
+    .esconder {
+        display: none;
+    }
+</style>
 
-      console.log('teste');
-        /* ALTERE O VALOR DAS VARIAVEIS ABAIXO */
-        var SECONDS_TO_DISPLAY = 435;
-        var CLASS_TO_DISPLAY = ".esconder";
-      
-        /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
-        var elsHiddenList = [];
-        var elsDisplayed = false;
-        var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
-        var alreadyElsDisplayed = localStorage.getItem('alreadyElsDisplayed')
-      
-        setTimeout(() => { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
-      
-        var showEls = () => {
-          elsDisplayed = true;
-          elsHiddenList.forEach((e)=> e.style.display = "block");
-          localStorage.setItem('alreadyElsDisplayed', true)
-        }
-      
-      //   var startWatchVideoProgress = () => {
-      //     // if (typeof smartplayer === 'undefined') {
-      //       setInterval(function(){
-      //           // console.log(smartplayer.instances[0].video.currentTime);
-            
-      //           console.log('showEls');
-      //       if (smartplayer.instances[0].video.currentTime > SECONDS_TO_DISPLAY) {
-      //           // console.log('agora vai!!!!!!!!!!!!!!!!!')
-      //       }
-      //       startWatchVideoProgress() 
-                
-      //       }, 500);
-      //   // }
-      
-      //     // smartplayer.instances[0].on('timeupdate', ()=> {
-              
-            
-            
-      //     // })
-      //   }
-      
-      //   if (alreadyElsDisplayed === 'true') {
-      //       setInterval(function(){
-      //           showEls();
-      //   },1000)
-          
-      //   } else {
-      //     startWatchVideoProgress()
-      //   }
-        setInterval(function(){
-            console.log(smartplayer.instances[0].video.currentTime);
-            
-            if (smartplayer.instances[0].video.currentTime > SECONDS_TO_DISPLAY) {
-                 console.log('teste');
-              $('.esconder').css('display','block');
-            }
-        },1000)
-      </script>
+<script>
+        $(document).ready(function() {
+        setTimeout(() => {
+            $('.esconder').fadeIn('slow');
+        }, 435 * 1 * 1000) // 30 é a quantidade em segundos do delay
+    })
+</script>
+<!--Fim do codigo para delay de conteudo-->
   
 </div>
 </div>
